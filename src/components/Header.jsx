@@ -15,6 +15,11 @@ export const Header = () => {
           Add Blog
         </button>
       </Link>
+      <Link>
+      <button>
+        Add more thing
+      </button>
+      </Link>
     </div>
   );
 };
