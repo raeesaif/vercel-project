@@ -13,7 +13,7 @@
 //   return (
 //     <div >
 //       <Header />
-//       <div className ='max-w-screen-lg w-full' >
+//       <div className ='max-w-screen-lg w-full mx-auto ' >
 //       <div className='flex flex-col ' >
 //       <h1 className=" flex justify-center text-3xl font-bold " >Blogs</h1>
 //       <div className='flex flex-col justify-center' >
@@ -84,7 +84,7 @@ export const Home = () => {
           <h1 className="text-3xl font-bold mb-8">Blogs</h1>
           <div className='grid grid-cols-1 gap-8 w-full'>
             {blogs.map((blog) => (
-              <div key={blog.id} className='border-b pb-4'>
+              <div key={blog.id} className=''>
                 <h2 className='text-2xl font-bold mb-2'>{blog.title}</h2>
                 <p className='text-xl'>{blog.content}</p>
               </div>
@@ -96,40 +96,3 @@ export const Home = () => {
   );
 };
 
-
-// new code 
-
-// import React, { useEffect, useState } from 'react';
-// import { Header } from '../components/Header';
-// import { Link } from 'react-router-dom';
-
-// export const Home = () => {
-//   const [blogs, setBlogs] = useState([]);
-
-//   useEffect(() => {
-//     const storedBlogs = JSON.parse(localStorage.getItem('blogs')) || [];
-//     setBlogs(storedBlogs);
-//   }, []);
-
-//   return (
-//     <div>
-//       <Header />
-//       <div className='max-w-screen-lg w-full mx-auto'>
-//         <div className='flex flex-col items-center'>
-//           <h1 className="text-3xl font-bold mb-8">Blogs</h1>
-//           <div className='grid grid-cols-1 gap-8 w-full'>
-//             {blogs.map((blog) => (
-//               <div key={blog.id} className='border-b pb-4'>
-//                 <h2 className='text-2xl font-bold mb-2'>{blog.title}</h2>
-//                 <p className='text-xl'>
-//                   {blog.content.slice(0, 100)}...
-//                   <Link to={`/blog/${blog.id}`} className='text-blue-500 ml-2'>Read more</Link>
-//                 </p>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
