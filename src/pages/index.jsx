@@ -82,7 +82,7 @@ export const Home = () => {
       <div className='max-w-screen-lg w-full mx-auto'>
         <div className='flex flex-col items-center'>
           <h1 className="text-3xl font-bold mb-8">Blogs</h1>
-          <div className='grid grid-cols-1 gap-8 w-full'>
+          <div className='grid grid-cols-1 gap-4 w-full'>
             {blogs.map((blog) => (
               <div key={blog.id} className=''>
                 <h2 className='text-2xl font-bold mb-2'>{blog.title}</h2>
